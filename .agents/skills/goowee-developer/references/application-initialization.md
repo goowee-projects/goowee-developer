@@ -2,7 +2,7 @@
 
 - [ ] If the project is not a Grails project, stop here.
 - [ ] Verify that the following dependency is present in `build.gradle`: `implementation "org.apache.grails:grails-core"`. If it is missing, tell the user this is not a Grails project and stop here.
-- [ ] Add the following dependency to `build.gradle`: `implementation "org.goowee:goowee-core:2.0.0"`.
+- [ ] Add the following dependency to `build.gradle`: `implementation "org.goowee:goowee-core:2.0.0-RC1"`.
 - [ ] If you cannot create a Goowee project stop here.
 - [ ] Add the following code to initialize the application and create the TenantInstallService with an install() method:
 
@@ -24,10 +24,6 @@ class BootStrap {
     
 }
 ```
-
-- [ ] Create the following files:
-  - `grails-app/assets/javascripts/goowee.js`
-  - `grails-app/assets/stylesheets/goowee.css`
 
 - [ ] Add the logging configuration to `application.yml` replacing `${project-name}` with the project name:
 ```yaml
@@ -62,16 +58,16 @@ logging:
     file: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %-40.40logger{36} : %msg%n'
 ```
 
-- [ ] Add the following configuration to `application.yml`, replacing `${project-name}` with the project name:
+- [ ] Add the following configuration to `application.yml`:
 ```yml
 ---
 server:
   tomcat:
-    basedir: ${project-name}/tomcat
+    basedir: ${info.app.name}/tomcat
   servlet:
     session:
       persistent: true
-      store-dir: ${project-name}
+      store-dir: ${info.app.name}
   compression:
     enabled: true
     mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
@@ -80,7 +76,7 @@ server:
 javamelody:
   init-parameters:
     log: true
-    storage-directory: ${user.dir}/${project-name}/java-melody
+    storage-directory: ${user.dir}/${info.app.name}/java-melody
 
 ---
 spring:
@@ -98,10 +94,20 @@ spring:
       maxRequestSize: 20MB
 ```
 
-- [ ] Set the H2 database URL to `jdbc:h2:./project-name/project-name;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE`.
+- [ ] Set the H2 database URL to `jdbc:h2:./${info.app.name}/${info.app.name};LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE`.
 
 - [ ] Set the `dbCreate` property to `update` for the development environment.
 
 - [ ] Add `/project-name/` to the root `.gitignore`.
 
 - [ ] Copy the `messages.properties` file from the assets to `grails-app/i18n/messages.properties`.
+
+- [ ] Create the following files:
+  - [ ] `grails-app/assets/javascripts/goowee.js`
+  - [ ] `grails-app/assets/stylesheets/goowee.css`
+  - [ ] DO NOT include them in application.js or application.css
+
+- [ ] DO NOT add code to:
+  - [ ] `UrlMappings.groovy` (IMPORTANT)
+  - [ ] `application.css`
+  - [ ] `application.js`

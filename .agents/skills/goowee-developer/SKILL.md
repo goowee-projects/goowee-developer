@@ -28,7 +28,8 @@ Use this skill when the task involves:
 ---
 
 ## Initialize the application
-See the reference documentation to initialize the application.
+- [ ] If the application is not initialized, just because you've been called, initialize it.
+- [ ] Execute the `application-initialization` reference.
 
 ## Create a CRUD
 To create a CRUD, create the following:
@@ -37,59 +38,41 @@ To create a CRUD, create the following:
 - [ ] Create a controller.
 
 ## Create a Domain Class
-See the reference documentation to create a domain class.
-IMPORTANT: Verify with the Compliance Checklist and correct if needed
+- [ ] Follow the `domain-classes` reference.
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
 ## Create a Service
-See the reference documentation to create a service.
-IMPORTANT: Verify with the Compliance Checklist and correct if needed
+- [ ] Follow the `services` reference.
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
 ## Create a Controller
-See the reference documentation to create a controller.
-IMPORTANT: Verify with the Compliance Checklist and correct if needed
+- [ ] Follow the `controllers` reference.
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
 ### Contents
-See the reference documentation for the available contents.
-IMPORTANT: Verify with the Compliance Checklist and correct if needed
+- [ ] Follow the `contents` reference.
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
 ### Components
-See the reference documentation for the available components.
-IMPORTANT: Verify with the Compliance Checklist and correct if needed
+- [ ] Follow the `components` reference.
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
 ### Controls
-See the reference documentation for the available controls.
-IMPORTANT: Verify with the Compliance Checklist and correct if needed
+- [ ] Follow the `controls` reference.
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
-### Actions
-See the reference documentation for the available actions.
-IMPORTANT: Verify with the Compliance Checklist and correct if needed
+### Events & Actions
+- [ ] Follow the `events` reference.
+- [ ] Refer to the `components` and `controls` references to implement available events
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
 ### Features
-See the reference documentation for the available features.
-IMPORTANT: Verify with the Compliance Checklist and correct if needed
+- [ ] Follow the `features` reference.
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
 ---
 
 ## Compliance Checklist
 Verify each of the following steps before proceeding:
 
-- [ ] Format code following the `coding-style` reference
-- [ ] Verify forbidden deviations
-- [ ] Verify forbidden practices
-
-### Forbidden Deviations
-Generated code MUST NOT:
-
-- Rename `c`, `obj`, or `params`.
-- Inline form definitions.
-- Skip `with {}` blocks.
-- Introduce business logic.
-- Bypass `display`.
-
-## Forbidden Practices
-- Business logic inside controllers.
-- Direct persistence access.
-- Bypassing `createContent`.
-- Building UI outside Goowee Elements APIs.
-- Defining forms outside `buildForm`.
-- Heavy logic inside `eachRow`.
+- [ ] Format code following the specific template code style and the general `coding-style` reference

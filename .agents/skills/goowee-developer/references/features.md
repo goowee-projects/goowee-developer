@@ -4,6 +4,10 @@ A _Goowee_ application exposes a finite set of features to its users. Features a
 
 After registration, features are implemented by their controllers.
 
+Features are internationalized with the following keys:
+ - Name: `shell.controllerName.actionName` (eg: `shell.book.index`)
+ - Help message displayed in the favourite box `shell.controllerName.actionName.help` (eg: `shell.book.index.help`)
+
 ## registerFeature()
 
 Registers a feature.
@@ -57,7 +61,7 @@ class BootStrap {
 - `<6>` Assigns the feature to its parent.
 
 > **IMPORTANT:** To block users without the required authority, the controller class must also be annotated with `@Secured(['ROLE_CAN_EDIT_BOOKS'])`.
-
+ 
 Available options:
 
 | Name | Type | Default | Description |
@@ -202,7 +206,7 @@ class BootStrap {
     def init = {
 
         gooweeApplication.onInit {
-            registerCredits('Application Development', 'Francesco Piceghello', 'Gianluca Sartori')
+            registerCredits('Application Development', 'Mario Rossi', 'Giuseppe Verdi')
         }
 
     }

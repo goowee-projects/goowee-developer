@@ -1,7 +1,8 @@
 package template
 
-import goowee.audit.AuditOperation
-import goowee.audit.AuditService
+import goowee.security.SecurityService
+import goowee.tenant.AuditOperation
+import goowee.tenant.AuditService
 import grails.gorm.DetachedCriteria
 import grails.gorm.multitenancy.CurrentTenant
 import grails.gorm.transactions.Transactional
