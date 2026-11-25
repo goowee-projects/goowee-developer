@@ -31,6 +31,13 @@ Use this skill when the task involves:
 - [ ] If the application is not initialized, just because you've been called, initialize it.
 - [ ] Execute the `application-initialization` reference.
 
+## Run the application
+- [ ] After creating the application follow the `run` reference.
+
+## Features
+- [ ] Follow the `features` reference.
+- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
+
 ## Create a CRUD
 To create a CRUD, create the following:
 - [ ] Create a domain class.
@@ -64,10 +71,6 @@ To create a CRUD, create the following:
 ### Events & Actions
 - [ ] Follow the `events` reference.
 - [ ] Refer to the `components` and `controls` references to implement available events
-- [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
-
-### Features
-- [ ] Follow the `features` reference.
 - [ ] IMPORTANT: Verify with the Compliance Checklist and correct if needed
 
 ---
