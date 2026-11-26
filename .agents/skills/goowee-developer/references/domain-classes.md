@@ -17,9 +17,9 @@ import java.time.LocalDateTime
 @GrailsCompileStatic
 class TCompany implements GormEntity, MultiTenant<TCompany> {
 
-  Long id
-  LocalDateTime dateCreated
-  LocalDateTime lastUpdated
+    Long id
+    LocalDateTime dateCreated
+    LocalDateTime lastUpdated
 
 }
 ```

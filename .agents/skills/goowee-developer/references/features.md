@@ -61,7 +61,7 @@ class BootStrap {
 - `<6>` Assigns the feature to its parent.
 
 > **IMPORTANT:** To block users without the required authority, the controller class must also be annotated with `@Secured(['ROLE_CAN_EDIT_BOOKS'])`.
- 
+
 Available options:
 
 | Name | Type | Default | Description |
@@ -206,7 +206,10 @@ class BootStrap {
     def init = {
 
         gooweeApplication.onInit {
-            registerCredits('Application Development', 'Mario Rossi', 'Giuseppe Verdi')
+            registerCredits('Application Development',
+                'Mario Rossi',
+                'Giuseppe Verdi',
+            )
         }
 
     }
