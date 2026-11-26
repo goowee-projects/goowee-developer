@@ -5,7 +5,7 @@
 - [ ] Add the following dependency to `build.gradle`: `implementation "org.goowee:goowee-core:2.0.0-RC1"`.
 - [ ] If you cannot create a Goowee project stop here.
 - [ ] Replace `BootStrap.groovy` with the `BootSatrp.groovy` asset and create the `TenantInstallService` with an `install()` method.
-- [ ] Append the EXACT UNEDITED `application.yml` asset content into the application `application.yml`.
+- [ ] Append the EXACT UNEDITED `application.yml` asset content into the application `application.yml`. Replace `${project-name}` with the value of Gradle `rootProject.name`.
 - [ ] Copy the `messages.properties` asset into. `grails-app/i18n/messages.properties`.
 
 - [ ] Create the following files:
