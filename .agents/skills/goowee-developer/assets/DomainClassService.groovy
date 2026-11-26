@@ -35,7 +35,7 @@ class DomainClassService {
             String search = filterParams.find.replaceAll('\\*', '%')
             query = query.where {
                 true
-                        || name =~ "%${search}%"
+                    || name =~ "%${search}%"
             }
         }
 
@@ -46,20 +46,20 @@ class DomainClassService {
     }
 
     private Map getFetchAll() {
-        // Add any relationship here (Eg. references to other DomainObjects or hasMany)
-        return [
-                'relationshipName': 'join',
-
-                // hasMany relationships
-                'hasManyRelationship': 'join',
+        // Add any relationship here
+        // like references to other DomainObjects or hasMany
+        return fetch + [
+            'hasManyRelationship': 'join',
         ]
     }
 
     private Map getFetch() {
-        // Add only single-sided relationships here (Eg. references to other Domain Objects)
-        // DO NOT add hasMany relationships, you are going to have troubles with pagination
+        // Add only single-sided relationships here
+        // like references to other Domain Objects
+        // Do not fetch hasMany relationships in paginated lists,
+        // they can cause pagination issues.
         return [
-                'relationshipName': 'join',
+            'relationshipName': 'join',
         ]
     }
 
@@ -108,7 +108,6 @@ class DomainClassService {
     }
 
     @Transactional
-    @Requires({ id })
     void delete(Serializable id) {
         TDomainClass obj = get(id)
         if (obj) {

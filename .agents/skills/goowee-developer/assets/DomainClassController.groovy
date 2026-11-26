@@ -28,18 +28,18 @@ class DomainClassController implements ElementsController {
         c.table.with {
             filters.with {
                 addField(
-                        class: TextField,
-                        id: 'find',
-                        label: TextDefault.FIND,
-                        cols: 12,
+                    class: TextField,
+                    id: 'find',
+                    label: TextDefault.FIND,
+                    cols: 12,
                 )
             }
             sortable = [
-                    name: 'asc',
+                name: 'asc',
             ]
             columns = [
-                    'name',
-                    'address',
+                'name',
+                'address',
             ]
 
             body.eachRow { TableRow row, Map values ->
@@ -55,8 +55,8 @@ class DomainClassController implements ElementsController {
 
     private buildForm(TCompany obj = null, Boolean readonly = false) {
         def c = obj
-                ? createContent(ContentEdit)
-                : createContent(ContentCreate)
+            ? createContent(ContentEdit)
+            : createContent(ContentCreate)
 
         if (readonly) {
             c.header.removeNextButton()
@@ -66,21 +66,21 @@ class DomainClassController implements ElementsController {
         c.form.with {
             validate = TCompany
             addField(
-                    class: TextField,
-                    id: 'name',
-                    cols: 12,
+                class: TextField,
+                id: 'name',
+                cols: 12,
             )
             addField(
-                    class: NumberField,
-                    id: 'vat',
-                    label: '',
-                    cols: 6,
+                class: NumberField,
+                id: 'vat',
+                label: '',
+                cols: 6,
             )
             addField(
-                    class: NumberField,
-                    id: 'address',
-                    label: '',
-                    cols: 6,
+                class: NumberField,
+                id: 'address',
+                label: '',
+                cols: 6,
             )
         }
 
