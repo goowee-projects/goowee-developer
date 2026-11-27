@@ -1,6 +1,7 @@
 # Application Initialization
 
 - [ ] If the project is not a Grails project, stop here.
+- [ ] Configure the IDE to use Java 21 for both the project and Gradle. 
 - [ ] Verify that the following dependency is present in `build.gradle`: `implementation "org.apache.grails:grails-core"`. If it is missing, tell the user this is not a Grails project and stop here.
 - [ ] Add the following dependency to `build.gradle`: `implementation "org.goowee:goowee-core:2.0.0"`.
 - [ ] If you cannot create a Goowee project stop here.

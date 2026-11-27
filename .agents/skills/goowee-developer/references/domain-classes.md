@@ -1,14 +1,16 @@
 # Domain Classes
 
+
 Goowee domain classes have the following characteristics:
 
 - [ ] Are located in `grails-app/domain/`
 - [ ] Are prefixed with the letter `T` (for example, `TCompany`).
+- [ ] If the user has not specified the properties of the domain class, ask them to provide the required properties.
 - [ ] Always implement a corresponding service class in `grails-app/services/`. If it does not exist, create one for the domain class. See the `services` reference
 - [ ] Register a pretty printer for the class in the `gooweeApplication.onInit` method.
 - [ ] Always implement `GormEntity` and `MultiTenant<>`
 - [ ] Always define the `constraints` block
-- [ ] Decide which properties are `nullable: false` depending on the domain and business logic
+- [ ] Decide which properties are `nullable: false` depending on the domain and business logic. Always add at least one mandatory property.
 - [ ] Always implement the following classes and fields:
 
 ```groovy
